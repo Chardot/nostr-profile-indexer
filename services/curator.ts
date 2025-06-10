@@ -14,7 +14,7 @@ export class ProfileCurator {
         pubkey: p.pubkey,
         relays: p.relay_list,
         score: p.score,
-        last_updated: p.last_seen.toISOString(),
+        last_updated: typeof p.last_seen === 'string' ? p.last_seen : p.last_seen.toISOString(),
       })),
     };
   }
