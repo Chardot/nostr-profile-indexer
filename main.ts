@@ -25,3 +25,5 @@ indexer.start().catch(console.error);
 // Start server
 console.log(`Server running on port ${config.port}`);
 await app.listen({ port: config.port });
+
+// Force redeploy with updated env vars
